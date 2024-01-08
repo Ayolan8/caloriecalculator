@@ -1,0 +1,133 @@
+:root {
+    --dark-blue: #020230; 
+    --fcc-blue: #060654;
+    --light-red: #e57e7e;
+    --light-grey: #f8f5f5;
+    --dark-yellow: #b6b605;
+    --light-yellow: #efef83;
+    --light-green: #acd157;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.toggle-btn {
+    background-color: var(--light-grey);
+    color: var(--dark-blue);
+    padding: 5px;
+    font-size: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* change background to light mode */
+.light-mode {
+    background-color: var(--light-grey);
+    color: var(--dark-blue);
+}
+
+.text {
+    text-align: center;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        color: #e57e7e;
+    }
+    75% {
+        opacity: 1;
+        color: #efef83;
+    }
+    100% {
+        opacity: 0;
+        color: green;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.container, .output {
+    margin: 56px auto;
+    width: 90%;
+    max-width: 680px;
+}
+
+fieldset, span, .container button, input, label {
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label, legend {
+    font-weight: bolder
+}
+
+.container button, select {
+    min-height: 27px;
+}
+
+input {
+    height: 20px;
+}
+
+.container button {
+    outline: none;
+    background-color: var(--dark-yellow);
+    border: 1px solid var(--light-red);
+    color: var(--fcc-blue);
+    /* font-weight: bold; */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.hide {
+    display: none;
+}
+
+.output {
+    text-align: center; 
+    border: 2px solid var(--light-grey);
+    padding: 10px;   
+}
+
+.output span {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.surplus {
+    color: var(--light-green);
+}
+
+.deficit {
+    color: var(--light-red);
+}
+
+@media screen and (max-width: 680px) {
+    body{
+        font-family: 'Open Sans', Roboto, Lato, 'Proxima Nova', sans-serif;
+        font-size: 15px;
+    } 
+    
+    .output span {
+        font-size: 17.5px;
+    }
+}
